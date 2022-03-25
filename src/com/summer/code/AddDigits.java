@@ -21,7 +21,7 @@ public class AddDigits {
 
 
 
-    public static int test(){
+    public static int method1(){
 
         return 0;
     }
