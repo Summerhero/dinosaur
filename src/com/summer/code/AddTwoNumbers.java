@@ -17,17 +17,16 @@ public class AddTwoNumbers {
 
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(4);
-        l1.next = new ListNode(3);
+        l1.next.next = new ListNode(3);
         ListNode l2 = new ListNode(5);
-        l1.next = new ListNode(6);
-        l1.next = new ListNode(4);
+        l2.next = new ListNode(6);
+        l2.next.next = new ListNode(4);
 
         ListNode result = method(l1,l2);
         while (result != null){
             System.out.println(result.val);
             result = result.next;
         }
-
     }
 
 
@@ -36,8 +35,9 @@ public class AddTwoNumbers {
     static ListNode method(ListNode l1,ListNode l2){
         // 参数校验略
         // 逻辑处理
-        // 定义结果 加数1  加数2\
-        ListNode result = null;
+        // 定义头节点以及尾节点
+        ListNode head = null;
+        ListNode tail = null;
         // 定义进位
         int  carry = 0;
         // 遍历入参节点
@@ -45,30 +45,29 @@ public class AddTwoNumbers {
             // 获取两个加数,当其中一个节点不存在下一个时，值用 0 代替
             int add1 = l1 != null ? l1.val : 0;
             int add2 = l2 != null ? l2.val : 0;
-
+            //  计算当前位的加和结果
             int sum = add1 + add2 + carry;
-
-
-            carry = sum > 9 ? 1 : 0 ;
-
-            int currVal = sum > 9 ? sum - 10 : sum;
-
-            if (result == null){
-                result = new ListNode(currVal);
+            // 获取当前位的值
+            // int currVal = sum > 9 ? sum - 10 : sum;
+             int currVal = sum % 10;
+            if (head == null){
+                head = tail = new ListNode(currVal);
             }else{
-                result.next = new ListNode(currVal);
+                tail.next = new ListNode(currVal);
+                tail = tail.next;
             }
-
+            // 获取进位值
+            // carry = sum > 9 ? 1 : 0 ;
+            carry = sum / 10 ;
+            // 下一节点
             l1 = l1 != null ? l1.next : null;
-            l2 = l2 != null ? l1.next : null;
-
+            l2 = l2 != null ? l2.next : null;
         }
-
+        // 判断最后是否需要进位
         if(carry > 0){
-            result.next = new ListNode(1);
+            tail.next = new ListNode(1);
         }
-
-        return result;
+        return head;
     }
 }
 
