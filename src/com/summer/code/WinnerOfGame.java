@@ -11,9 +11,5 @@ public class WinnerOfGame {
 
     public static void main(String[] args) {
 
-
     }
-
-
-
 }
