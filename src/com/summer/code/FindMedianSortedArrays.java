@@ -15,7 +15,7 @@ public class FindMedianSortedArrays {
         int[] nums2 = new int[]{4,5,6,7};
 //        int[] nums1 = new int[]{1,3};
 //        int[] nums2 = new int[]{2};
-        System.out.println(method1(nums1, nums2));
+        System.out.println(method(nums1, nums2));
 
     }
 
@@ -26,7 +26,7 @@ public class FindMedianSortedArrays {
      * @param nums2 数组2
      * @return
      */
-    static double method1(int[] nums1, int[] nums2){
+    static double method(int[] nums1, int[] nums2){
         // 参数校验 暂略
         int[] nums = new int[nums1.length+nums2.length];
         // 判断nums1数组的最大值是否小于 nums2数组的最小值

@@ -11,23 +11,23 @@ public class TrailingZeroes {
     public static void main(String[] args) {
 
         System.out.println("factorial:result = " + factorial(2));
-        System.out.println("method1:result = " + method1(2));
-        System.out.println("method1:result = " + method1(3));
+        System.out.println("method:result = " + method(2));
+        System.out.println("method:result = " + method(3));
         System.out.println();
 
         System.out.println("factorial:result = " + factorial(5));
-        System.out.println("method1:result = " + method1(5));
-        System.out.println("method1:result = " + method1(5));
+        System.out.println("method:result = " + method(5));
+        System.out.println("method:result = " + method(5));
         System.out.println();
 
         System.out.println("factorial:result = " + factorial(10));
-        System.out.println("method1:result = " + method1(10));
-        System.out.println("method1:result = " + method1(10));
+        System.out.println("method:result = " + method(10));
+        System.out.println("method:result = " + method(10));
         System.out.println();
 
         System.out.println("factorial:result = " + factorial(15));
-        System.out.println("method1:result = " + method1(15));
-        System.out.println("method1:result = " + method1(15));
+        System.out.println("method:result = " + method(15));
+        System.out.println("method:result = " + method(15));
 
 
     }
@@ -56,7 +56,7 @@ public class TrailingZeroes {
      * @param n 整数 n
      * @return 尾随零的数量
      */
-    static int method1(int n){
+    static int method(int n){
         // 参数校验
         // 逻辑处理
         // 定于计数器

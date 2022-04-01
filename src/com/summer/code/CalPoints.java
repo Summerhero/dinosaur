@@ -12,7 +12,7 @@ public class CalPoints {
 
     }
 
-    static void method1(){
+    static void method(){
 
     }
 }

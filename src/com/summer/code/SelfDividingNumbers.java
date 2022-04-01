@@ -12,10 +12,10 @@ import java.util.List;
 public class SelfDividingNumbers {
     public static void main(String[] args) {
 
-        List<Integer> result1 = method1(1,22);
+        List<Integer> result1 = method(1,22);
         System.out.println(result1.toString());
 
-        List<Integer> result2 = method1(47,85);
+        List<Integer> result2 = method(47,85);
         System.out.println(result2.toString());
 
 
@@ -33,7 +33,7 @@ public class SelfDividingNumbers {
      * @param right 右区间整数
      * @return  自除数列表
      */
-    static List<Integer> method1(int left, int right) {
+    static List<Integer> method(int left, int right) {
         // 定义 自除数结果列表
         List<Integer> result = new ArrayList<>();
         // 遍历给定区间整数
