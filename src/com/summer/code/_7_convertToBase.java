@@ -6,7 +6,7 @@ package com.summer.code;
  * @Description https://leetcode-cn.com/problems/base-7/
  * 给定一个整数 num，将其转化为 7 进制，并以字符串形式输出。
  */
-public class ConvertToBase7 {
+public class _7_convertToBase {
 
     public static void main(String[] args) {
        String result =  test01(1000);
