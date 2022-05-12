@@ -10,9 +10,7 @@ public class _731_numSubarrayProductLessThanK {
 
     public static void main(String[] args) {
 
-
         int[] nums = new int[]{10,5,2,6};
-
         int result = method1(nums,100);
         System.out.println(result);
 
